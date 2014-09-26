@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>University:</b>
+  <%= @alumni.university_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @alumni.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @alumni.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @alumni.phone %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @alumni.age %>
+</p>
+
+<p>
+  <b>Graduation year:</b>
+  <%= @alumni.graduation_year %>
+</p>
+
+<p>
+  <b>Linkedin:</b>
+  <%= @alumni.linkedin %>
+</p>
+
+
+<%= link_to 'Edit', edit_alumni_path(@alumni) %> |
+<%= link_to 'Back', alumnis_path %>

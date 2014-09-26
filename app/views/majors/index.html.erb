@@ -1,0 +1,29 @@
+<h1>Listing majors</h1>
+
+<table>
+  <tr>
+    <th>Uni major</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Level</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @majors.each do |major| %>
+  <tr>
+    <td><%= major.uni_major_id %></td>
+    <td><%= major.name %></td>
+    <td><%= major.description %></td>
+    <td><%= major.level %></td>
+    <td><%= link_to 'Show', major %></td>
+    <td><%= link_to 'Edit', edit_major_path(major) %></td>
+    <td><%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Major', new_major_path %>

@@ -1,0 +1,25 @@
+<h1>Listing uni_majors</h1>
+
+<table>
+  <tr>
+    <th>University</th>
+    <th>Major</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @uni_majors.each do |uni_major| %>
+  <tr>
+    <td><%= uni_major.university_id %></td>
+    <td><%= uni_major.major_id %></td>
+    <td><%= link_to 'Show', uni_major %></td>
+    <td><%= link_to 'Edit', edit_uni_major_path(uni_major) %></td>
+    <td><%= link_to 'Destroy', uni_major, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Uni major', new_uni_major_path %>

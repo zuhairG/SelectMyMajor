@@ -1,0 +1,35 @@
+<h1>Listing alumnis</h1>
+
+<table>
+  <tr>
+    <th>University</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Age</th>
+    <th>Graduation year</th>
+    <th>Linkedin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alumnis.each do |alumni| %>
+  <tr>
+    <td><%= alumni.university_id %></td>
+    <td><%= alumni.name %></td>
+    <td><%= alumni.email %></td>
+    <td><%= alumni.phone %></td>
+    <td><%= alumni.age %></td>
+    <td><%= alumni.graduation_year %></td>
+    <td><%= alumni.linkedin %></td>
+    <td><%= link_to 'Show', alumni %></td>
+    <td><%= link_to 'Edit', edit_alumni_path(alumni) %></td>
+    <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alumni', new_alumni_path %>

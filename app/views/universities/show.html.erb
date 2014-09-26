@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @university.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @university.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @university.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @university.email %>
+</p>
+
+<p>
+  <b>Alumni:</b>
+  <%= @university.alumni_id %>
+</p>
+
+<p>
+  <b>Uni major:</b>
+  <%= @university.uni_major_id %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @university.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @university.state %>
+</p>
+
+<p>
+  <b>Balance:</b>
+  <%= @university.balance %>
+</p>
+
+
+<%= link_to 'Edit', edit_university_path(@university) %> |
+<%= link_to 'Back', universities_path %>

@@ -1,0 +1,39 @@
+<h1>Listing universities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Alumni</th>
+    <th>Uni major</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Balance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @universities.each do |university| %>
+  <tr>
+    <td><%= university.name %></td>
+    <td><%= university.address %></td>
+    <td><%= university.phone %></td>
+    <td><%= university.email %></td>
+    <td><%= university.alumni_id %></td>
+    <td><%= university.uni_major_id %></td>
+    <td><%= university.city %></td>
+    <td><%= university.state %></td>
+    <td><%= university.balance %></td>
+    <td><%= link_to 'Show', university %></td>
+    <td><%= link_to 'Edit', edit_university_path(university) %></td>
+    <td><%= link_to 'Destroy', university, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New University', new_university_path %>

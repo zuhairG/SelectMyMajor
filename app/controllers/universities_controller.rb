@@ -1,8 +1,8 @@
 class UniversitiesController < ApplicationController
   # GET /universities
   # GET /universities.json
+  load_and_authorized_resource
   def index
-    @universities = University.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +24,6 @@ class UniversitiesController < ApplicationController
   # GET /universities/new
   # GET /universities/new.json
   def new
-    @university = University.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +33,11 @@ class UniversitiesController < ApplicationController
 
   # GET /universities/1/edit
   def edit
-    @university = University.find(params[:id])
   end
 
   # POST /universities
   # POST /universities.json
   def create
-    @university = University.new(params[:university])
 
     respond_to do |format|
       if @university.save
@@ -56,7 +53,6 @@ class UniversitiesController < ApplicationController
   # PUT /universities/1
   # PUT /universities/1.json
   def update
-    @university = University.find(params[:id])
 
     respond_to do |format|
       if @university.update_attributes(params[:university])
@@ -72,8 +68,6 @@ class UniversitiesController < ApplicationController
   # DELETE /universities/1
   # DELETE /universities/1.json
   def destroy
-    @university = University.find(params[:id])
-    @university.destroy
 
     respond_to do |format|
       format.html { redirect_to universities_url }

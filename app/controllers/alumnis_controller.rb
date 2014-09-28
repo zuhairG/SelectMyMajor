@@ -1,6 +1,7 @@
 class AlumnisController < ApplicationController
   # GET /alumnis
   # GET /alumnis.json
+  
   def index
     @alumnis = Alumni.all
 

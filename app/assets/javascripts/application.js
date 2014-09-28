@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+ $(function() {
+  $("#lava_menu").lavaLamp({
+    fx: "backout",
+    speed: 700
+  });
+});
+
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});

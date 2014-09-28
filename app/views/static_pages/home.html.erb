@@ -2,28 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-  <title>ARaynorDesign Template</title>
-  <meta name="description" content="free website template" />
-  <meta name="keywords" content="enter your keywords here" />
+
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" type="text/css" href="static_pages.css.scss" />
-  <script type="text/javascript" src="javascripts/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="query.lavalamp.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $("#lava_menu").lavaLamp({
-        fx: "backout",
-        speed: 700
-      });
-    });
-  </script>
-    <script type="text/javascript" src="jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider();
-    });
-    </script>
+  <%= stylesheet_link_tag    "static_pages", :media => "all" %>
+  
+
+  <%= javascript_include_tag "application","jquery.nivo.slider.pack" %>
+
+ 
 
 </head>
 

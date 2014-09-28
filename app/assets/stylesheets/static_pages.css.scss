@@ -90,7 +90,7 @@ ol li
 	width: 920px;
 }
 #slider {
-    background: url("../../assets/images/loading.gif") no-repeat scroll 50% 50% transparent;
+    background: url("loading.gif") no-repeat scroll 50% 50% transparent;
     height: 250px;
     position: relative;
     width: 920px;
@@ -164,7 +164,7 @@ ol li
     display: none;
 }
 .nivo-directionNav a {
-    background: url("../../assets/images/arrows.png") no-repeat scroll 0 0 transparent;
+    background: url("arrows.png") no-repeat scroll 0 0 transparent;
     cursor: pointer;
     display: block;
     height: 30px;
@@ -223,7 +223,7 @@ span
 { width: 960px;
   height: 50px;
   color: #000;
-  background: transparent url(../../assets/images/menubar.png) no-repeat;} 
+  background: transparent url(menubar.png) no-repeat;} 
   
 #contact{
   width: 230px;
@@ -237,7 +237,7 @@ span
 { width: 960px;
   overflow: hidden;
   margin-top: 20px;
-  background: transparent url(../../assets/images/pattern.png) repeat;}  
+  background: transparent url(pattern.png) repeat;}  
 
 .sidebar_container
 { float: left;
@@ -321,7 +321,7 @@ span
   margin-bottom: 40px;
   padding: 20px 0 0px 0;
   text-align: center; 
-  background: transparent url(../../assets/images/footer.png) no-repeat;
+  background: transparent url(footer.png) no-repeat;
   color: #FFF;}
 
 #footer a, #footer a:hover

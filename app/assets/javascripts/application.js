@@ -14,9 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
  $(function() {
-  $("#lava_menu").lavaLamp({
-    fx: "backout",
-    speed: 700
+  $("#lava_menu").hover({
+    fx: "backout", speed: 700
   });
 });
 

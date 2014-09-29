@@ -1,12 +1,33 @@
-    
+ 
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=763077007091465&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+</style>
   <div id="footer">  
     <div class="footer_content">
       <div class="footer_text">
 	  <h2>Connect With Us</h2>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique dignissim laoreet.</p>
+	  <div>
+	 </br>
+<div class="fb-like" data-href="https://www.facebook.com/selectmymajor" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></br>
+</br>
+
+	<a href="https://twitter.com/Selectmymajor" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @Selectmymajor</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</div>
+	
 	</div>
 	<div class="footer_text">
-	  <h2>University & Alumnis</h2>
+	  <h2>University & Alumni</h2>
+	  </br>
 	  <% if user_signed_in? %>
 	    
        Signed in as <%= current_user.email %>. Not you?
@@ -23,5 +44,4 @@
 	</div>
 	<br style="clear:both"/>
   </div><!--close footer_content-->	   
-    <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://fotogrph.com/">Images</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
 </div><!--close footer-->

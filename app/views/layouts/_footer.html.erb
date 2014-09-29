@@ -1,0 +1,27 @@
+    
+  <div id="footer">  
+    <div class="footer_content">
+      <div class="footer_text">
+	  <h2>Connect With Us</h2>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique dignissim laoreet.</p>
+	</div>
+	<div class="footer_text">
+	  <h2>University & Alumnis</h2>
+	  <% if user_signed_in? %>
+	    
+       Signed in as <%= current_user.email %>. Not you?
+       <ul>
+      <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>
+     <% else %>
+       <li> <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %></li>
+     <% end %>
+     </ul>
+	</div>
+	<div class="footer_text">
+	  <h2>More about SelectMyMajor</h2>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique dignissim laoreet.</p>
+	</div>
+	<br style="clear:both"/>
+  </div><!--close footer_content-->	   
+    <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://fotogrph.com/">Images</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
+</div><!--close footer-->

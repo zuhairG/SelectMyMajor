@@ -1,7 +1,7 @@
 SelectMyMajor::Application.routes.draw do
 
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   get '/about', to: 'static_pages#about'
   get '/home', to: 'static_pages#home'

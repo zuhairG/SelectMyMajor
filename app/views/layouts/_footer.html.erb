@@ -14,9 +14,9 @@
   <div id="footer">  
     <div class="footer_content">
       <div class="footer_text">
-	  <h2 class = "links">Connect With Us</h2>
+	  <h2>Connect With Us</h2>
 	  <div>
-	 <div class = "links" >
+	 </br>
 <div class="fb-like" data-href="https://www.facebook.com/selectmymajor" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div></br>
 </br>
 
@@ -31,16 +31,17 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>	
 	</div>
 	</div>
-	</div>
+	
 	<div class="footer_text">
-	  <h2 class = "links">University & Alumni</h2>
+	  <h2>University & Alumni</h2>
+	  </br>
 	  <% if user_signed_in? %>
 	    
        Signed in as <%= current_user.email %>. Not you?
        <ul>
-      <li class = "links"> <%= link_to "Sign out", destroy_user_session_path, :method => :get %> </li>
+      <li> <%= link_to "Sign out", destroy_user_session_path, :method => :get %> </li>
      <% else %>
-       <li class = "links"> <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %></li>
+       <li> <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %></li>
      <% end %>
      </ul>
 	</div>

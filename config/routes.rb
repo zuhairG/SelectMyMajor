@@ -1,12 +1,12 @@
 SelectMyMajor::Application.routes.draw do
 
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }, :controllers => { :application => "admin" }
 
   get '/about', to: 'static_pages#about'
   get '/home', to: 'static_pages#home'
   get '/privacy', to: 'static_pages#privacy'
-
+get '/admin', to: 'static_pages#admin'
 
 
 

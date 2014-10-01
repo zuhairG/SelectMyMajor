@@ -1,7 +1,6 @@
 class UniversitiesController < ApplicationController
   # GET /universities
   # GET /universities.json
-  load_and_authorized_resource
   def index
 
     respond_to do |format|

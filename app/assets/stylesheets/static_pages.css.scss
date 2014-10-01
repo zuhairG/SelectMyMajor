@@ -320,8 +320,8 @@ span
   font: normal 100% arial, sans-serif;
   height: 200px;
   margin-bottom: 40px;
-  padding: 20px 0 0px 0;
-  text-align: center; 
+  padding: 20px auto 0px 0;
+  text-align: left; 
   background: transparent url(footer.png) no-repeat;
   color: #FFF;}
 
@@ -334,7 +334,7 @@ span
 
 .footer_content
 { width: 960px;
-  text-align: center;
+  text-align: left;
   margin: 0 0 20px 20px;
   float: left;}
   
@@ -387,7 +387,4 @@ span
 	background: transparent;
 }
 .links { 
-	margin: 2px 0px 15px 20px;
-	text-align:left;
-
 }

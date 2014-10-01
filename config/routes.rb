@@ -6,7 +6,7 @@ SelectMyMajor::Application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/home', to: 'static_pages#home'
   get '/privacy', to: 'static_pages#privacy'
-get '/admin', to: 'static_pages#admin'
+  get '/admin', to: 'static_pages#admin'
 
 
 

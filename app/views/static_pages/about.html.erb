@@ -1,2 +1,45 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<style>
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+</style>
+
+<body>
+<div id="main">	
+  
+    <div id="site_content">  
+<h1>About SelectMyMajor.com</h1>
+
+<p>SelectMyMajor.com is an online tool that help students who want to continue their studies find and compare different majors under one roof. Our website allows you to find information about all different majors and which universities offer them, in order to save you the time of having to visit different websites to find this information.
+</p>
+<p>The site is developed by three young Carnegie Mellon University graduates, who went through the process of searching for the right major and applying to different universities.
+</p>	
+</br>
+</br>
+<h1>Meet the Team</h1>
+</br>
+
+<div class="container">
+   <div class="column-center"><h1>Jaasim Pollin</h1></div>
+   <div class="column-left"><h1>Daniel Cheweiky</h1></div>
+   <div class="column-right"><h1>Zuhair Ghalib</h1></div>
+</div>
+
+</br>
+</br>
+
+
+
+<div class="container">
+   <div class="column-center">Jaasim Pollin</div>
+   <div class="column-left">        <%= image_tag "daniel.jpg", :alt => "slide1",:height => "400px", :width => "250px", :style => " border: 0px solid " %>
+</div>
+   <div class="column-right">        <%= image_tag "zuhair.jpg", :alt => "slide1",:height => "400px", :width => "250px", :style => " border: 0px solid" %>
+</div>
+</div>
+
+
+	</div>
+	
+</div>
+</body>

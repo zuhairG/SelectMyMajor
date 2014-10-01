@@ -1,6 +1,6 @@
 <h2><%= t('.contact_us') %></h2>
-<%= simple_form_for user, :url => contacts_path do |f| %>
-<%= simple_form_for user, :url => contacts_path do |f| %>
+<%= simple_form_for :user, :url => contacts_path do |f| %>
+
   <%= f.input :name, :label => t('.name') if ContactUs.require_name %>
   <%= f.input :email, :label => t('.email') %>
   <%= f.input :subject, :label => t('.subject') if ContactUs.require_subject %>

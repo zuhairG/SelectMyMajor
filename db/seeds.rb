@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create( email: 'acheweiky@gmail.com', role: "admin", password: 'sameer123', password_confirmation: 'sameer123')
 User.create( email: 'zuhair.ghalib@gmail.com', role: "admin", password: 'sameer123', password_confirmation: 'sameer123')
+User.create( email: 'uni@uni.edu', role: "University", password: 'sameer123', password_confirmation: 'sameer123')
+User.create( email: 'alumni@uni.edu', role: "Alumni", password: 'sameer123', password_confirmation: 'sameer123')

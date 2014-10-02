@@ -1,18 +1,28 @@
-<div id="main">	
-  <div id="site_content">  
-  <div id="menubar">
-      <ul class="lavaLampWithImage" id="lava_menu">
-        <li class="current"><a href="/home">Home</a></li>
-        <li><a href="#">Bachelors</a></li>
-        <li><a href="#">Masters</a></li>
-        <li><a href="#">PhD</a></li>
-        <% if current_user %>
-        <li><a href="#menu-toggle" id="menu-toggle">Show Menu</a> </li>
-        <% end %>
-  
- 
-      </ul>
-  </div><!--close menubar-->
-</div>
-</div>
-</div>
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">SelectMyMajor.com</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">Bachelors</a></li>
+                <li><a href="#contact">Masters</a></li>
+				<li><a href="#contact">PhD</a></li>
+          
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>

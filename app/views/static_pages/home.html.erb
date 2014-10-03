@@ -10,13 +10,15 @@
     <title>SelectMyMajor.com</title>
 
     <!-- Bootstrap core CSS -->
-	  <%= stylesheet_link_tag    "static_pages.css", "application", :media => "all" %>
+	  <%= stylesheet_link_tag    "static_pages"%>
+	  <%= stylesheet_link_tag    "bootstrap"%>
 
-  <%= stylesheet_link_tag    "bootstrap.css", "application", :media => "all" %>
-<%= javascript_include_tag  "ie-emulation-modes-warning.js" %>
-<%= javascript_include_tag  "ie10-viewport-bug-workaround.js" %>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-  	 <%= stylesheet_link_tag    "static_pages.css", "application", :media => "all" %>
+<%= javascript_include_tag  "ie-emulation-modes-warning" %>
+<%= javascript_include_tag  "ie10-viewport-bug-workaround" %>
+
 
 
     <!-- Custom styles for this template -->
@@ -156,9 +158,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<%= javascript_include_tag  "docs.min.js" %>
-<%= javascript_include_tag  "jquery.min.js" %>
-<%= javascript_include_tag  "bootstrap.min.js" %>
-
+    <%= javascript_include_tag  "docs.min","bootstrap.min", "jquery.min" %>
+    
   </body>
 </html>

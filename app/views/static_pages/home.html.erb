@@ -11,10 +11,9 @@
 
     <!-- Bootstrap core CSS -->
 	  <%= stylesheet_link_tag    "static_pages"%>
-	  <%= stylesheet_link_tag    "bootstrap"%>
+	  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 <%= javascript_include_tag  "ie-emulation-modes-warning" %>
 <%= javascript_include_tag  "ie10-viewport-bug-workaround" %>
@@ -26,7 +25,6 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-    
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -67,8 +65,8 @@
           </div>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class= "glyphicon glyphicon-chevron-left"> </span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class= "glyphicon glyphicon-chevron-right"> </span></a>
     </div><!-- /.carousel -->
 
 

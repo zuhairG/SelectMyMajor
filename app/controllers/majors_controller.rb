@@ -1,7 +1,7 @@
 class MajorsController < ApplicationController
   # GET /majors
   # GET /majors.json
-  load_and_authorized_resource
+      load_and_authorize_resource
   def index
     @majors = Major.all
 
@@ -25,7 +25,7 @@ class MajorsController < ApplicationController
   # GET /majors/new
   # GET /majors/new.json
   def new
-
+    @major = Major.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @major }
@@ -34,11 +34,15 @@ class MajorsController < ApplicationController
 
   # GET /majors/1/edit
   def edit
+    @major = Major.find(params[:id])
+    
   end
 
   # POST /majors
   # POST /majors.json
   def create
+    
+    @major = Major.new(params[:major])
 
     respond_to do |format|
       if @major.save
@@ -54,6 +58,7 @@ class MajorsController < ApplicationController
   # PUT /majors/1
   # PUT /majors/1.json
   def update
+    @major = Major.find(params[:id])
 
     respond_to do |format|
       if @major.update_attributes(params[:major])
@@ -69,6 +74,7 @@ class MajorsController < ApplicationController
   # DELETE /majors/1
   # DELETE /majors/1.json
   def destroy
+    @major = Major.find(params[:id])
     @major.destroy
 
     respond_to do |format|

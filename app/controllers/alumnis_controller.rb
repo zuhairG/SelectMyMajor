@@ -1,7 +1,7 @@
 class AlumnisController < ApplicationController
   # GET /alumnis
   # GET /alumnis.json
-  
+      load_and_authorize_resource
   def index
     @alumnis = Alumni.all
 

@@ -3,6 +3,7 @@
 
         <div class="navbar navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
+
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -20,11 +21,15 @@
 				<li><a href="#contact">PhD</a></li>
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="#contact">Sign In</a></li>
+				<li><%= link_to "Sign in", new_user_session_path %></li>
 				</ul>
 				</div>
           </div>
         </div>
-
+        <% flash.each do |name, msg| %>
+        <div class="alert alert-warning"<%= name == :notice ? "success" : "error" %>">
+          <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+        </div>
+        <% end %>
       </div>
     </div>

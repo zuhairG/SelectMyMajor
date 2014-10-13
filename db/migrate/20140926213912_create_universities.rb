@@ -3,7 +3,7 @@ class CreateUniversities < ActiveRecord::Migration
     create_table :universities do |t|
       t.string :name
       t.string :address
-      t.integer :phone
+      t.string :phone
       t.string :email
       t.integer :alumni_id
       t.integer :uni_major_id

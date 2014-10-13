@@ -13,6 +13,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'contact_us'
 gem 'simple_form'
+gem 'paperclip'
 
 # Gems used only for assets and not required
 # in production environments by default.

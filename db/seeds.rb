@@ -9,3 +9,6 @@ User.create( email: 'acheweiky@gmail.com', role: "admin", password: 'sameer123',
 User.create( email: 'zuhair.ghalib@gmail.com', role: "admin", password: 'sameer123', password_confirmation: 'sameer123')
 User.create( email: 'uni@uni.edu', role: "University", password: 'sameer123', password_confirmation: 'sameer123')
 User.create( email: 'alumni@uni.edu', role: "Alumni", password: 'sameer123', password_confirmation: 'sameer123')
+University.create( email: 'test@uni.edu', name: 'testuni', phone: '222-222-2222', address: 'here & there' )
+University.create( email: 'test1@uni.edu', name: 'testuni1', phone: '222-222-2222', address: 'here & there' )
+University.create( email: 'test2@uni.edu', name: 'testuni2', phone: '222-222-2222', address: 'here & there', picture: 'cmuq.jpg' )

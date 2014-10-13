@@ -1,38 +1,29 @@
 <h1>Listing universities</h1>
 
+<% @universities.each do |university| %>
 <div class="panel panel-primary">
+
 <table>
+
   <tr>
-    <td>Name</td>
+  <tr>
+  <td> <%= image_tag university.picture %> </td>
+  </tr>
+    <td> Name: <%= university.name %></td>
   </tr>
    <tr>
-    <td>Address</td>
+   <td> Address: <%= university.address %></td>
   </tr>
    <tr>
-    <td>Phone</td>
+   <td> Phone: <%= university.phone %></td>
   </tr>
   <tr>
-    <td>Email</td>
+  <td> Email: <%= university.email %></td>
   </tr>
   
   </table>
 </div>
 
-<% @universities.each do |university| %>
-  <tr>
-    <td><%= university.name %></td>
-    <td><%= university.address %></td>
-    <td><%= university.phone %></td>
-    <td><%= university.email %></td>
-    <td><%= university.alumni_id %></td>
-    <td><%= university.uni_major_id %></td>
-    <td><%= university.city %></td>
-    <td><%= university.state %></td>
-    <td><%= university.balance %></td>
-    <td><%= link_to 'Show', university %></td>
-    <td><%= link_to 'Edit', edit_university_path(university) %></td>
-    <td><%= link_to 'Destroy', university, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
 <% end %>
 
 

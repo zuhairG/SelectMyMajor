@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140930041110) do
+ActiveRecord::Schema.define(:version => 20141013182818) do
 
   create_table "alumnis", :force => true do |t|
     t.integer  "university_id"
@@ -44,15 +44,19 @@ ActiveRecord::Schema.define(:version => 20140930041110) do
   create_table "universities", :force => true do |t|
     t.string   "name"
     t.string   "address"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "email"
     t.integer  "alumni_id"
     t.integer  "uni_major_id"
     t.string   "city"
     t.string   "state"
     t.integer  "balance"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "users", :force => true do |t|

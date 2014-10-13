@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20141013182818) do
   create_table "universities", :force => true do |t|
     t.string   "name"
     t.string   "address"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "email"
     t.integer  "alumni_id"
     t.integer  "uni_major_id"

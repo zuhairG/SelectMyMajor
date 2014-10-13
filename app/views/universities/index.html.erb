@@ -28,5 +28,6 @@
 
 
 <br />
-
+  <% if can? :create, @university %>
 <%= link_to 'New University', new_university_path %>
+  <% end %>

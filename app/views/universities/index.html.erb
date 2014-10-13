@@ -6,19 +6,18 @@
 <table>
 
   <tr>
-  <tr>
-  <td> <%= image_tag university.picture %> </td>
-  </tr>
-    <td> Name: <%= university.name %></td>
-  </tr>
-   <tr>
-   <td> Address: <%= university.address %></td>
-  </tr>
-   <tr>
-   <td> Phone: <%= university.phone %></td>
-  </tr>
-  <tr>
-  <td> Email: <%= university.email %></td>
+  <td style="padding-right:20px"> <%= image_tag university.picture %> </td>
+  
+    <td> 
+	<b><h2> <%= university.name %></h2> </b>
+	</br>
+	Address: <%= university.address %>
+	</br>
+	Phone: <%= university.phone %>
+	</br>
+	Email: <%= university.email %>
+	</td>
+	
   </tr>
   
   </table>

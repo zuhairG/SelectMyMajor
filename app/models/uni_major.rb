@@ -1,5 +1,5 @@
 class UniMajor < ActiveRecord::Base
   belongs_to :univesity
-  has_one :major
+  belongs_to :major
   attr_accessible :major_id, :university_id
 end

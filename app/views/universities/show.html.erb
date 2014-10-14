@@ -40,7 +40,9 @@
 <% end %>
 <p>
   <b>Majors:</b>
-  <%= @university.majors %>
+  <% for major in @university.majors do %>
+    <%= link_to major.name, major %>
+    <% end %>
 </p>
 <p>
   <b>Alumni:</b>

@@ -15,6 +15,15 @@ User.create( email: 'acheweiky@gmail.com', role: "admin", password: 'sameer123',
 User.create( email: 'zuhair.ghalib@gmail.com', role: "admin", password: 'sameer123', password_confirmation: 'sameer123')
 User.create( email: 'uni@uni.edu', role: "University", password: 'sameer123', password_confirmation: 'sameer123')
 User.create( email: 'alumni@uni.edu', role: "Alumni", password: 'sameer123', password_confirmation: 'sameer123')
-University.create( email: 'cmuq@uni.edu', name: 'cmuq', phone: '222-222-2222', address: 'education city', picture: seed_image('cmuq') )
+is = Major.create(name: 'Information Systems', description: 'this is the IS major', level: 'Bachelors')
+cs = Major.create(name: 'Computer Science', description: 'this is the CS major', level: 'Bachelors')
+ba = Major.create(name: 'Business Administration', description: 'this is the BA major', level: 'Bachelors')
+
 University.create( email: 'test1@uni.edu', name: 'testuni1', phone: '222-222-2222', address: 'here & there' )
 University.create( email: 'test2@uni.edu', name: 'testuni2', phone: '222-222-2222', address: 'here & there' )
+
+University.create( email: 'cmuq@uni.edu', name: 'cmuq', phone: '222-222-2222', address: 'education city', picture: seed_image('cmuq'), majors:[Major.find_by_name('Information Systems'), Major.find_by_name('Computer Science'),  Major.find_by_name('Business Administration')])
+
+University.create( email: 'cmuq@uni.edu', name: 'cmuq12', phone: '222-222-2222', address: 'education city', picture: seed_image('cmuq'), majors:[is, ba, cs])
+
+

@@ -80,23 +80,23 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                  <%= image_tag "alumni.jpg", :class=>"img-circle", :alt => "Generic placeholder image",:height => "140px", :width => "140px" %>
+          <h2>Alumni</h2>
+          <p>Get a chance to check out alumni profiles to view what projects they achieved while studying and in which industries plus departments they are working in after graduation</p>
+          <p><a class="btn btn-default" href="#" role="button">View All &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-        
-		<h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                  <%= image_tag "campus.jpg", :class=>"img-circle", :alt => "Generic placeholder image",:height => "140px", :width => "140px" %>
+
+		<h2>University</h2>
+          <p> Check out the profiles of all the universities registered in order to check what majors they offer, yearly tuition costs, and a variety of projects created by alumnis from various majors </p>
+          <p>   <%= link_to "View All &raquo;".html_safe, '/universities', :class =>"btn btn-default" , :role=>"button" %></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                  <%= image_tag "diploma.jpg", :class=>"img-circle", :alt => "Generic placeholder image",:height => "140px", :width => "140px" %>
+          <h2>Majors</h2>
+          <p>Browse into what majors are offered worldwide with a description of what each major is, which universities are offering this major and where are graduates working</p>
+          <p><a class="btn btn-default" href="#" role="button">View All &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -107,11 +107,11 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Carnegie Mellon University <span class="text-muted">Pittsburgh Campus</span></h2>
+          <p class="lead">For more than a century, Carnegie Mellon University has been inspiring innovations that change the world. Consistently top ranked, Carnegie Mellon has more than 12,000 students, 95,000 alumni and 5,000 faculty and staff globally</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <%= image_tag "cmuq.jpg", :alt => "slide1",:height => "350px", :width => "500px", :style => " border: 0px solid " %>
         </div>
       </div>
 
@@ -119,11 +119,11 @@
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <%= image_tag "nuq.jpg", :alt => "slide1",:height => "350px", :width => "450px", :style => " border: 0px solid " %>
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">NorthWestern University <span class="text-muted">Qatar Campus</span></h2>
+          <p class="lead">NU-Q is not just a media school, however; it's a community of students who undertake a broad and rigorous curriculum in the liberal arts that enriches their capacity for critical thinking and broadens their world-view. The university ensures that graduates are broadly educated in areas beyond their specialties with an emphasis on cultivating flexibility of mind and a capacity for critical thinking and clear expression.</p>
         </div>
       </div>
 
@@ -131,11 +131,11 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Texas A&M University <span class="text-muted">Qatar Campus</span></h2>
+          <p class="lead"> Since the fall of 2003, Texas A&M University at Qatar has offered Bachelor of Science degrees in chemical engineering, electrical engineering, mechanical engineering and petroleum engineering. In addition to engineering courses, Texas A&M University at Qatar provides instruction in science, mathematics, liberal arts and the humanities. The curriculum offered at Texas A&M at Qatar are identical to the ones offered at the main campus in College Station, Texas. Courses are taught in English and in a coeducational setting. The reputation for excellence is the same, as is the commitment to training engineers equipped to lead the next generation of engineering throughout the world.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <%= image_tag "tamuq.jpg", :alt => "slide1",:height => "350px", :width => "450px", :style => " border: 0px solid " %>
         </div>
       </div>
 

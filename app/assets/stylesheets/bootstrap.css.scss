@@ -19,6 +19,13 @@ html {
 body {
   margin: 0;
 }
+#main
+{
+margin-right:15px;
+margin-left:15px;
+
+}
+
 article,
 aside,
 details,
@@ -3973,7 +3980,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-bottom: 15px;
   }
   .navbar-nav.navbar-right:last-child {
-    margin-right: -15px;
+    margin-right: 30px;
   }
 }
 @media (min-width: 768px) {
@@ -5218,6 +5225,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-primary {
   border-color: #428bca;
+  
 }
 .panel-primary > .panel-heading {
   color: #fff;
@@ -5228,6 +5236,7 @@ a.list-group-item-danger.active:focus {
   border-top-color: #428bca;
 }
 .panel-primary > .panel-heading .badge {
+
   color: #428bca;
   background-color: #fff;
 }
@@ -6206,4 +6215,5 @@ button.close {
     display: none !important;
   }
 }
+
 /*# sourceMappingURL=bootstrap.css.map */

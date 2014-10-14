@@ -9,7 +9,7 @@
   <td >  <%= image_tag university.picture, :class => "uni_image" %> </td>
 
    <td> 
-	<b><h2> <%= university.name %></h2> </b>
+	<b><h2> <%= link_to university.name, university %></h2> </b>
 	</br>
 	Address: <%= university.address %>
 	</br>

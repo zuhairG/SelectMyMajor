@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+<%= image_tag @university.picture, :class => "uni_image" %></p>
+
+<p>
   <b>Name:</b>
   <%= @university.name %>
 </p>
@@ -8,26 +11,6 @@
 <p>
   <b>Address:</b>
   <%= @university.address %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @university.phone %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @university.email %>
-</p>
-
-<p>
-  <b>Alumni:</b>
-  <%= @university.alumni_id %>
-</p>
-
-<p>
-  <b>Uni major:</b>
-  <%= @university.uni_major_id %>
 </p>
 
 <p>
@@ -39,12 +22,32 @@
   <b>State:</b>
   <%= @university.state %>
 </p>
+<p>
+  <b>Phone:</b>
+  <%= @university.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @university.email %>
+</p>
+<% if can? :edit, @university %>
 
 <p>
   <b>Balance:</b>
   <%= @university.balance %>
 </p>
+<% end %>
+<p>
+  <b>Majors:</b>
+  <%= @university.majors %>
+</p>
+<p>
+  <b>Alumni:</b>
+  <%= @university.alumni %>
+</p>
 
-
+<% if can? :edit, @university %>
 <%= link_to 'Edit', edit_university_path(@university) %> |
 <%= link_to 'Back', universities_path %>
+<% end %>

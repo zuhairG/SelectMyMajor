@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-<%= image_tag @university.picture, :class => "uni_image" %></p>
 
-<ul class="list-group">
+
+<%= image_tag @university.picture, :class => "uni_image" %>
+
+<ul class="list-group" style="width:390px">
+
   <li class="list-group-item">
  
 
@@ -23,18 +26,6 @@
 </li>
   <li class="list-group-item">
 <p>
-  <b>City:</b>
-  <%= @university.city %>
-</p>
-</li>
-  <li class="list-group-item">
-<p>
-  <b>State:</b>
-  <%= @university.state %>
-</p>
-</li>
-  <li class="list-group-item">
-<p>
   <b>Phone:</b>
   <%= @university.phone %>
 </p>
@@ -47,6 +38,17 @@
 
  </li>
 </ul>
+</p>
+
+
+<p>
+  <b>City:</b>
+  <%= @university.city %>
+</p>
+<p>
+  <b>State:</b>
+  <%= @university.state %>
+</p>
 
 <% if can? :edit, @university %>
 

@@ -75,6 +75,8 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+   margin-left: 20px;
+  margin-right: 20px;
 }
 mark {
   color: #000;
@@ -4833,6 +4835,7 @@ a.thumbnail.active {
 .list-group {
   padding-left: 0;
   margin-bottom: 20px;
+    padding: 15px;
 }
 .list-group-item {
   position: relative;
@@ -5007,6 +5010,10 @@ a.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 20px;
+    margin-left: 20px;
+  margin-right: 20px;
+
+padding:65px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -5043,6 +5050,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel > .list-group {
   margin-bottom: 0;
+  
 }
 .panel > .list-group .list-group-item {
   border-width: 1px 0;
@@ -5222,18 +5230,22 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ddd;
+    padding:15px;
+
 }
 .panel-primary {
-  border-color: #428bca;
-  
+  border-color: #ddd;
+  padding:15px;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #428bca;
-  border-color: #428bca;
+  background-color: #ddd;
+  border-color: #ddd;
+    padding:15px;
+
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #428bca;
+  border-top-color: #ddd;
 }
 .panel-primary > .panel-heading .badge {
 

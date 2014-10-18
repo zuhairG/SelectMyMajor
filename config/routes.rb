@@ -7,7 +7,7 @@ SelectMyMajor::Application.routes.draw do
   get '/home', to: 'static_pages#home'
   get '/privacy', to: 'static_pages#privacy'
   get '/admin', to: 'static_pages#admin'
-
+  get 'searchUniversities', to: 'universities#searchUniversity'
 
 
   resources :majors
@@ -20,6 +20,7 @@ SelectMyMajor::Application.routes.draw do
 
 
   resources :universities
+
 
 
   # The priority is based upon order of creation:

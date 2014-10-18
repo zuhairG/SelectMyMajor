@@ -1,0 +1,33 @@
+<%# app/views/students/index.html.erb %>
+<h1>Universities</h1>
+
+<%#
+  Filterrific adds some magic when you use form_for with @filterrific:
+  * adds dom id 'filterrific_filter'
+  * applies javascript behaviors:
+      * AJAX form submission on change
+      * AJAX spinner while AJAX request is being processed
+  * sets form_for options like :url, :method and input name prefix
+%>
+<%= form_for @filterrific,  :url => {:action => :searchUniversity}  do |f| %>
+  <div>
+    Search
+    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+    <%= f.text_field(
+      :search_query,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+  <div>
+    <%= link_to(
+      'Reset filters'
+    ) %>
+  </div>
+  <%# add an automated spinner to your form when the list is refreshed %>
+  <%= render_filterrific_spinner %>
+<% end %>
+
+<%= render(
+  partial: 'universities/list',
+  locals: { universities: @universities }
+) %>

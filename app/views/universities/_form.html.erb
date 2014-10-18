@@ -30,6 +30,12 @@
   <%= f.label :picture %><br />
   <%= f.file_field :picture %>
   </div>
+   <div class="field">
+    <%= f.label :majors %><br />
+   
+		<%= collection_select(:university, :major_ids, Major.all, :id, :name, {:prompt=>'select Majors'}, {:multiple=>true})  %>
+
+  </div>
   <br / >
   <div class="actions">
     <%= f.submit %>

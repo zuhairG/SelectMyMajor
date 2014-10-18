@@ -1,0 +1,23 @@
+<div id="filterrific_results">
+<div>
+  <%= page_entries_info universities # provided by will_paginate %>
+</div>
+
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>city</th>
+    </tr>
+    <% universities.each do |university| %>
+      <tr>
+        <td><%= university.name %></td>
+        <td><%= university.address %></td>
+        <td><%= university.city %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= will_paginate universities # provided by will_paginate %>

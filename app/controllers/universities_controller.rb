@@ -35,7 +35,7 @@ class UniversitiesController < ApplicationController
   # GET /universities/1/edit
   def edit
     @university = University.find(params[:id])
-    
+
   end
 
   # POST /universities
@@ -80,4 +80,15 @@ class UniversitiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def searchUniversity
+    @filterrific = Filterrific.new(University, params[:filterrific])
+    @universities = University.filterrific_find(@filterrific).page(params[:page])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+
 end

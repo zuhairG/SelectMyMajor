@@ -1,36 +1,55 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-<%= image_tag @university.picture, :class => "uni_image" %></p>
+
+
+<%= image_tag @university.picture, :class => "uni_image" %>
+
+<ul class="list-group" style="width:390px">
+
+  <li class="list-group-item">
+ 
+
+
 
 <p>
   <b>Name:</b>
   <%= @university.name %>
 </p>
+</li>
+  <li class="list-group-item">
 
 <p>
   <b>Address:</b>
   <%= @university.address %>
 </p>
+</li>
+  <li class="list-group-item">
+<p>
+  <b>Phone:</b>
+  <%= @university.phone %>
+</p>
+</li>
+  <li class="list-group-item">
+<p>
+  <b>Email:</b>
+  <%= @university.email %>
+</p>
+
+ </li>
+</ul>
+</p>
+
 
 <p>
   <b>City:</b>
   <%= @university.city %>
 </p>
-
 <p>
   <b>State:</b>
   <%= @university.state %>
 </p>
-<p>
-  <b>Phone:</b>
-  <%= @university.phone %>
-</p>
 
-<p>
-  <b>Email:</b>
-  <%= @university.email %>
-</p>
 <% if can? :edit, @university %>
 
 <p>
@@ -39,13 +58,13 @@
 </p>
 <% end %>
 <p>
-  <b>Majors:</b>
+  <b><h3>Majors:</h3></b>
   <% for major in @university.majors do %>
     <%= link_to major.name, major %>
     <% end %>
 </p>
 <p>
-  <b>Alumni:</b>
+  <b><h3>Alumni:</h3></b>
   <%= @university.alumni %>
 </p>
 

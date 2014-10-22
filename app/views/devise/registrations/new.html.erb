@@ -14,10 +14,16 @@
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+   
+   
+       <% if resource.role? %>
+
     <div><%= f.label :role %><br />
        <% @roles = %w[University Alumni] %>
        <%= f.collection_select :role, @roles, :to_s, :to_s, include_blank: false
        %><br />
+       <% end %>
+       
      </p>
   <div><%= f.submit "Sign up" %></div> <br>
 <% end %>

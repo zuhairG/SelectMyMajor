@@ -1,4 +1,4 @@
-class Ability
+class UserAbility < ActiveRecord::Base
   include CanCan::Ability
   
   def initialize(user)
@@ -10,9 +10,6 @@ class Ability
         elsif user.role == "University"
           can :manage, :Major
           can :manage, :University
-           
-        elsif user.role == "Alumni"
-          #alumni ability goes here
         else
           can :read, :all
         end

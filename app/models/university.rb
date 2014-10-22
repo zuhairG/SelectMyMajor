@@ -8,8 +8,9 @@ class University < ActiveRecord::Base
   has_attached_file :picture, :default_url => "image1.jpg"
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
+
   filterrific(
-  default_settings: { sorted_by: 'created_at_desc' },
+  
   filter_names: [
     :name,
     :address,

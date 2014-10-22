@@ -1,6 +1,8 @@
 SelectMyMajor::Application.routes.draw do
 
 
+  devise_for :alumnis
+
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }, :controllers => { :application => "admin" }
 
   get '/about', to: 'static_pages#about'

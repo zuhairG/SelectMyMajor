@@ -18,6 +18,7 @@ User.create( email: 'alumni@uni.edu', role: "Alumni", password: 'sameer123', pas
 is = Major.create(name: 'Information Systems', description: 'this is the IS major', level: 'Bachelors')
 cs = Major.create(name: 'Computer Science', description: 'this is the CS major', level: 'Bachelors')
 ba = Major.create(name: 'Business Administration', description: 'this is the BA major', level: 'Bachelors')
+Alumni.create( email: 'test1@alumni.edu',password: 'alumni1', name: 'alumni1', phone: '222-222-2222')
 
 University.create( email: 'test1@uni.edu', name: 'testuni1', phone: '222-222-2222', address: 'here & there' )
 University.create( email: 'test2@uni.edu', name: 'testuni2', phone: '222-222-2222', address: 'here & there' )

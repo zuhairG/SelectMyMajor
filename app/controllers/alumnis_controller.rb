@@ -11,6 +11,17 @@ class AlumnisController < ApplicationController
     end
   end
 
+  
+def invite
+   @alumni = Alumni.find(params[:id])
+   Alumni.invite!(:email => @alumni.email)
+   flash.now[:success] = "Invitation email has been sent"
+   respond_to do |format|
+     format.js
+   end
+ end
+  
+  
   # GET /alumnis/1
   # GET /alumnis/1.json
   def show

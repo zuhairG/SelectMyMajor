@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141022222605) do
+ActiveRecord::Schema.define(:version => 20141025195631) do
 
   create_table "alumnis", :force => true do |t|
     t.integer  "university_id"
@@ -40,8 +40,12 @@ ActiveRecord::Schema.define(:version => 20141022222605) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      :default => 0
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
   end
 
+  add_index "alumnis", ["confirmation_token"], :name => "index_alumnis_on_confirmation_token", :unique => true
   add_index "alumnis", ["email"], :name => "index_alumnis_on_email", :unique => true
   add_index "alumnis", ["invitation_token"], :name => "index_alumnis_on_invitation_token", :unique => true
   add_index "alumnis", ["invitations_count"], :name => "index_alumnis_on_invitations_count"

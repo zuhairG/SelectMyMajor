@@ -6,4 +6,6 @@ class Major < ActiveRecord::Base
   
   LEVELS = %w["Bachelors", "Masters", "PhD"]
   
+  
+  default_scope { order('name') } 
 end

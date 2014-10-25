@@ -9,5 +9,6 @@ class AlumniAbility  < ActiveRecord::Base
      # can :edit, Application, :student_id => user.id
      # can :destroy, Application, :student_id => user.id
       can :read, University
+      
   end
 end

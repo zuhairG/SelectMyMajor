@@ -6,24 +6,60 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+   <% if resource.class == Alumni %> 
+     <div>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+   <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-   
-   
-       <% if resource.role? %>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </div>
+      <div class="field">
+    <%= f.label :university %><br />
+    <%= collection_select(:alumni, :university_id, University.all, :id, :name, {:prompt=>'select Universitiy'}, {:multiple=>false} )%><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :graduation_year %><br />
+    <%= f.date_select :graduation_year %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin %><br />
+    <%= f.text_field :linkedin %>
+  </div>
+
+  <% end %>
+
+   <% if resource.class == User %> 
+    <div><%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+   <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+
 
     <div><%= f.label :role %><br />
-       <% @roles = %w[University Alumni] %>
+    
+       <% @roles = %w[University] %>
        <%= f.collection_select :role, @roles, :to_s, :to_s, include_blank: false
        %><br />
        <% end %>
-       
      </p>
   <div><%= f.submit "Sign up" %></div> <br>
 <% end %>

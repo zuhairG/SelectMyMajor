@@ -15,11 +15,11 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><%= link_to "Home", root_path %></li>
-                <li><a href="#about">Bachelors</a></li>
-                <li><a href="#contact">Masters</a></li>                
-				        <li><a href="#contact">PhD</a></li>
-				        <li><%= link_to "Universities", universities_path %></li>
+                <li <%if controller?("static_pages") && action?("home")%> class="active" <%end%> > <%= link_to "Home", root_path %></li>
+				        <li <%if controller?("majors") && action?("index")%> class="active" <%end%>> <%= link_to "Majors", majors_path %></li>
+
+				        <li <%if controller?("universities") && action?("index")%> class="active" <%end%>> <%= link_to "Universities", universities_path %></li>
+				        <li <%if controller?("alumnis") && action?("index")%> class="active" <%end%>> <%= link_to "Alumnis", alumnis_path %></li>
                 
               </ul>
 			  <ul class="nav navbar-nav navbar-right">

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20141022200830) do
     t.string   "email"
     t.integer  "phone"
     t.integer  "age"
-    t.integer  "graduation_year"
+    t.date     "graduation_year"
     t.string   "linkedin"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false

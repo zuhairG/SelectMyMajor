@@ -6,7 +6,7 @@ class CreateAlumnis < ActiveRecord::Migration
       t.string :email
       t.integer :phone
       t.integer :age
-      t.integer :graduation_year
+      t.date :graduation_year
       t.string :linkedin
 
       t.timestamps

@@ -6,10 +6,9 @@ class Alumni < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
   belongs_to :university
   has_one :uni_major, through: :university
-  attr_accessible :age, :email, :graduation_year, :linkedin, :name, :phone, :university_id
+  attr_accessible :age, :email, :graduation_year, :linkedin, :name, :phone, :university_id, :email, :password, :password_confirmation, :remember_me
 end
 
 public 

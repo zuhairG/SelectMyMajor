@@ -21,7 +21,10 @@
   </div>
   <div class="field">
     <%= f.label :level %><br />
-    <%= f.text_field :level %>
+<% @levels = %w[Bachlors Masters PhD] %>
+       <%= f.collection_select :level, @levels, :to_s, :to_s, include_blank: false%><br />
+       <br />
+
   </div>
   <div class="actions">
     <%= f.submit %>

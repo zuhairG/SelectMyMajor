@@ -12,7 +12,10 @@ Devise.setup do |config|
   # with default "from" parameter.
 
   # Configure the class responsible to send e-mails.
-  # config.mailer = 'Devise::Mailer'
+   #config.mailer = 'Devise::Mailer'
+  # From: selectmymajor@gmail.com
+  
+    config.mailer_sender = "selectmymajor@gmail.com"
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

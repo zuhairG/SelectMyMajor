@@ -10,6 +10,7 @@ class Alumni < ActiveRecord::Base
   belongs_to :university
   has_one :uni_major, through: :university
   attr_accessible :age, :email, :graduation_year, :linkedin, :name, :phone, :university_id, :email, :password, :password_confirmation, :remember_me
+  acts_as_messageable
 
 end
 
@@ -21,3 +22,15 @@ def role?
 	
 end
 
+def name 
+
+return "You should add method :name in your Messageable model"
+end
+
+def mailboxer_email(object)
+  #Check if an email should be sent for that object
+  #if true
+  return "define_email@on_your.model"
+  #if false
+  #return nil
+end

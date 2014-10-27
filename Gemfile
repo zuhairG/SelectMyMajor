@@ -17,7 +17,6 @@ gem 'simple_form'
 gem 'paperclip'
 gem 'filterrific'
 gem 'will_paginate'
-gem 'mailboxer'
 
 # Gems used only for assets and not required
 # in production environments by default.

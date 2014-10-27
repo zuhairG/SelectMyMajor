@@ -47,7 +47,7 @@ SelectMyMajor::Application.configure do
     :domain => "mail.google.com",
     :authentication => :login,
     :user_name => 'selectmymajor',
-    :password => 'sameer@123'
+    :password => 'sameer@123',
     :enable_starttls_auto => true 
   }
   

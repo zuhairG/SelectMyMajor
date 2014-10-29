@@ -1,34 +1,49 @@
+
 <h1>Majors</h1>
 
-<table>
-  <tr>
-
-    <th>Name</th>
-    <th>Description</th>
-    <th>Level</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+ <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>Major</th>
+                        <th>Level</th>
+						<th>Category</th>
+                    </tr>
+                </thead>
+	
+			
 <% @majors.each do |major| %>
-  <tr>
 
-    <td><%= link_to major.name, major %></td>
-    <td><%= major.description %></td>
-    <td><%= major.level %></td>
-  <% if can? :edit, @major %>
+
+  
+        <div class="col-lg-12">
+ 
+
+
+                <thead>
+                    <tr>
+                        <td><%= link_to major.name, major %></td>
+                        <td><%= major.level %></td>
+                        <td><%= major.category %></td>
+                    </tr>
+      
+                </thead>
+        </div>
+    
+   
+   <% if can? :edit, @major %>
     <td><%= link_to 'Edit', edit_major_path(major) %></td> 
     <td><%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-    
     <% end %>
-  </tr>
+  
   
 <% end %>
-
 </table>
-<br />
-<br />
+</div>
+</div>
+</div>
   <% if can? :create, @major %>
 <%= link_to 'New Major', new_major_path %>
  <% end %>

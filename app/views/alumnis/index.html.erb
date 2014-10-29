@@ -2,8 +2,10 @@
 
 <table>
   <tr>
-     <th>Name</th>
+     <th>Name</th> 
+     
     <th>University</th>
+    
     <th>Email</th>
     <th>Phone</th>
     <th>Age</th>
@@ -16,8 +18,9 @@
 
 <% @alumnis.each do |alumni| %>
   <tr>
-    <td><%= alumni.university_id %></td>
     <td><%= alumni.name %></td>
+        <td><%= alumni.university.name %></td>
+
     <td><%= alumni.email %></td>
     <td><%= alumni.phone %></td>
     <td><%= alumni.age %></td>

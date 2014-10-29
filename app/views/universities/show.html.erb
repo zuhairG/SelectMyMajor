@@ -24,6 +24,23 @@
   <%= @university.address %>
 </p>
 </li>
+
+ <li class="list-group-item">
+
+<p>
+  <b>City:</b>
+  <%= @university.city %>
+</p>
+</li>
+ <li class="list-group-item">
+
+<p>
+  <b>State:</b>
+  <%= @university.state %>
+</p>
+</li>
+
+
   <li class="list-group-item">
 <p>
   <b>Phone:</b>
@@ -41,15 +58,6 @@
 </p>
 
 
-<p>
-  <b>City:</b>
-  <%= @university.city %>
-</p>
-<p>
-  <b>State:</b>
-  <%= @university.state %>
-</p>
-
 <% if can? :edit, @university %>
 
 <p>
@@ -65,7 +73,10 @@
 </p>
 <p>
   <b><h3>Alumni:</h3></b>
-  <%= @university.alumni %>
+  <% @university.alumni%>
+    <% for alumni in @university.alumni do %>
+    <%= link_to alumni.name, alumni %>
+    <% end %>
 </p>
 
 <% if can? :edit, @university %>

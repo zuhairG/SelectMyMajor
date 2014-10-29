@@ -28,3 +28,4 @@ University.create( email: 'cmuq@uni.edu', name: 'cmuq', phone: '222-222-2222', a
 University.create( email: 'cmuq@uni.edu', name: 'cmuq12', phone: '222-222-2222', address: 'education city', picture: seed_image('cmuq'), majors:[is, ba, cs])
 
 
+Alumni.create(email: 'alumni@cmu.edu', name: 'cmualum', phone: '222-222-2222', university_id: '3', graduation_year: '2014-05-05', major: cs, email: 'alum@cmu.edu',password: 'sameer123', password_confirmation: 'sameer123', confirmed_at: Time.now)

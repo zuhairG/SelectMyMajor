@@ -31,7 +31,10 @@
     <%= f.label :university %><br />
     <%= collection_select(:alumni, :university_id, University.all, :id, :name, {:prompt=>'select Universitiy'}, {:multiple=>false} )%><br />
   </div>
-
+      <div class="field">
+    <%= f.label :major %><br />
+    <%= collection_select(:alumni, :major, Major.all, :id, :name, {:prompt=>'select your major'}, {:multiple=>false} )%><br />
+  </div>
   <div class="field">
     <%= f.label :graduation_year %><br />
     <%= f.date_select :graduation_year %>

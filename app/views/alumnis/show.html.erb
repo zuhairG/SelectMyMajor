@@ -34,6 +34,12 @@
   <b>Linkedin:</b>
   <%= @alumni.linkedin %>
 </p>
+
+<p>
+  <b>major:</b>
+  <%= @alumni.major.name %>
+</p>
+
 <p>
 <%= link_to 'Invite Alumni', new_alumni_invitation_path(:alumni) %>
 

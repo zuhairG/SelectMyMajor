@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141025195631) do
+ActiveRecord::Schema.define(:version => 20141029194044) do
 
   create_table "alumnis", :force => true do |t|
     t.integer  "university_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20141025195631) do
     t.string   "level"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "alumni_id"
   end
 
   create_table "uni_majors", :force => true do |t|

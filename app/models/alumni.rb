@@ -8,8 +8,8 @@ class Alumni < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   belongs_to :university
-  has_one :uni_major, through: :university
-  attr_accessible :age, :email, :graduation_year, :linkedin, :name, :phone, :university_id, :email, :password, :password_confirmation, :remember_me
+  has_one :major
+  attr_accessible :age, :email, :graduation_year, :linkedin, :name, :phone, :university_id, :email, :password, :password_confirmation, :remember_me, :major, :confirmed_at
 
 end
 

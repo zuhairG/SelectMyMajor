@@ -83,7 +83,7 @@
                   <%= image_tag "alumni.jpg", :class=>"img-circle", :alt => "Generic placeholder image",:height => "140px", :width => "140px" %>
           <h2>Alumni</h2>
           <p>Get a chance to check out alumni profiles to view what projects they achieved while studying and in which industries plus departments they are working in after graduation</p>
-          <p><a class="btn btn-default" href="#" role="button">View All &raquo;</a></p>
+          <p><%= link_to "View All &raquo;".html_safe, '/alumnis', :class =>"btn btn-default" , :role=>"button" %></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
                   <%= image_tag "campus.jpg", :class=>"img-circle", :alt => "Generic placeholder image",:height => "140px", :width => "140px" %>
@@ -96,7 +96,7 @@
                   <%= image_tag "diploma.jpg", :class=>"img-circle", :alt => "Generic placeholder image",:height => "140px", :width => "140px" %>
           <h2>Majors</h2>
           <p>Browse into what majors are offered worldwide with a description of what each major is, which universities are offering this major and where are graduates working</p>
-          <p><a class="btn btn-default" href="#" role="button">View All &raquo;</a></p>
+          <p><%= link_to "View All &raquo;".html_safe, '/majors', :class =>"btn btn-default" , :role=>"button" %></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 

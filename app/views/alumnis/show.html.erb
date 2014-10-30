@@ -1,6 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+
+
+
+ <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+        <div class="col-md-3 col-md-offset-1 text-center">
+          <div class="panel panel-default">
+          	<div class="panel-body">
+            	<img class="img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h1 class="welcomeText heading"> <%= @alumni.name %> </h1>
+        </div>
+        <h3 class="welcomeText headingInfo">       <%=@alumni.major.name %> graduate from <%= @alumni.university.name %> </h3>
+      </div>
+    </div>
+  </div>
+
+  
+  <p>
   <b>University:</b>
   <%= @alumni.university.name %>
 </p>

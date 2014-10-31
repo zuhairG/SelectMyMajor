@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
-<p>
-  <b>Name:</b>
-  <%= @major.name %>
-</p>
 
-<p>
-  <b>Description:</b>
-  <%= @major.description %>
-</p>
 
-<p>
-  <b>Level:</b>
-  <%= @major.level %>
-</p>
+
+ <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+        <div class="col-md-3 col-md-offset-1 text-center">
+          
+        </div>
+       </div>
+	    <h1 class="welcomeText headingInfo" style="margin-left: 0px;"> <%= @major.name %> </h1>
+
+        <h3 class="welcomeText headingInfo" style="margin-left: 0px;"> <%= @major.level %> Level </h3>
+		        <h3 class="welcomeText headingInfo"> <%= @major.description %>  </h3>
+
+    </div>
+  </div>
+
+
 
 
 <%= link_to 'Edit', edit_major_path(@major) %> |

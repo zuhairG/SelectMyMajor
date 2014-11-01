@@ -1,4 +1,25 @@
 <p id="notice"><%= notice %></p>
+<head>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+        <div class="col-md-3 col-md-offset-1 text-center">
+          <div class="panel panel-default">
+            	<%= image_tag @university.picture, :class => "img-thumbnail" %>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h1 class="welcomeText heading"> <%= @university.name %> </h1>
+        </div>
+        <h3 class="welcomeText headingInfo">       Samir</h3>
+      </div>
+    </div>
+  </div>
+</body>
 
 <p>
 

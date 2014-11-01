@@ -12,6 +12,7 @@ class UserAbility < ActiveRecord::Base
           can :manage, :University
         else
           can :read, :all
+		  can :searchUniversity, University
         end
       end
     end

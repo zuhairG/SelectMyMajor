@@ -1,33 +1,27 @@
-<%# app/views/students/index.html.erb %>
+
+
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css">
+
 <h1>Universities</h1>
-
-<%#
-  Filterrific adds some magic when you use form_for with @filterrific:
-  * adds dom id 'filterrific_filter'
-  * applies javascript behaviors:
-      * AJAX form submission on change
-      * AJAX spinner while AJAX request is being processed
-  * sets form_for options like :url, :method and input name prefix
-%>
-<%= form_for @filterrific,  :url => {:action => :searchUniversity}  do |f| %>
-  <div>
-    Search
-    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
-    <%= f.text_field(
-      :search_query,
-      class: 'filterrific-periodically-observed'
-    ) %>
-  </div>
-  <div>
-    <%= link_to(
-      'Reset filters'
-    ) %>
-  </div>
-  <%# add an automated spinner to your form when the list is refreshed %>
-  <%= render_filterrific_spinner %>
-<% end %>
-
-<%= render(
-  partial: 'universities/list',
-  locals: { universities: @universities }
-) %>
+<!-- jQuery -->
+<table id="universities" class="display">
+<thead>
+  <tr>
+    <th>University Name</th>
+    <th>Address</th>
+    <th>Email</th>
+  </tr>
+</thead>
+<tbody>
+  <% @universities.each do |university| %>
+    <tr>
+      <td><%= link_to(university.name, university) %></td>
+      <td><%= university.address %></td>
+      <td><%= university.email %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

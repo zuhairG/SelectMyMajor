@@ -81,11 +81,12 @@ class UniversitiesController < ApplicationController
     end
   end
 
-   def searchUniversity
-@universities = University.all
+  def searchUniversity
+    @filterrific = Filterrific.new(University, params[:filterrific])
+    @universities = University.filterrific_find(@filterrific).page(params[:page])
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @universities }
+      format.html
+      format.js
     end
   end
 

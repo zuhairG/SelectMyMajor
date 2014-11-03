@@ -73,6 +73,15 @@ class MajorsController < ApplicationController
 
   # DELETE /majors/1
   # DELETE /majors/1.json
+  def searchMajor
+  @majors = Major.all
+  respond_to do |format|
+  format.html #index.html.erb
+  format.json {render json:@majors}
+  end
+  end
+  
+  
   def destroy
     @major = Major.find(params[:id])
     @major.destroy

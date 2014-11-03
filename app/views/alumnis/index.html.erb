@@ -21,7 +21,7 @@
 <tbody>
 <% @alumnis.each do |alumni| %>
     <tr>
-      <td><%= alumni.name %></td>
+      <td><%= link_to alumni.name, alumni %></td>
       <td><%= alumni.university.name %></td>
       <td><%= alumni.graduation_year %></td>
     </tr>

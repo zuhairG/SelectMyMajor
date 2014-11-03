@@ -22,7 +22,7 @@
 <% @majors.each do |major| %>
     <tr>
       <td><%= link_to major.name, major %></td>
-      <td><%= link_to major.level, major %></td>
+      <td><%= major.level %></td>
       <td><%= major.category %></td>
     </tr>
   <% end %>

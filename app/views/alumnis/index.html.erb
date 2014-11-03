@@ -1,38 +1,45 @@
-<h1>Listing alumnis</h1>
 
-<table>
+ 
+ 
+ 
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css">
+
+<h1>Alumnis</h1>
+<!-- jQuery -->
+</br>
+<table id="universities" class="table table-striped table-bordered" style="margin-left:20px;">
+<thead>
   <tr>
-     <th>Name</th> 
-     
+    <th>Name</th>
     <th>University</th>
-    
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Age</th>
-    <th>Graduation year</th>
-    <th>Linkedin</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Graduation</th>
   </tr>
-
+</thead>
+<tbody>
 <% @alumnis.each do |alumni| %>
-  <tr>
-    <td><%= alumni.name %></td>
-        <td><%= alumni.university.name %></td>
+    <tr>
+      <td><%= alumni.name %></td>
+      <td><%= alumni.university.name %></td>
+      <td><%= alumni.graduation_year %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
 
-    <td><%= alumni.email %></td>
-    <td><%= alumni.phone %></td>
-    <td><%= alumni.age %></td>
-    <td><%= alumni.graduation_year %></td>
-    <td><%= alumni.linkedin %></td>
+   <% if can? :edit, @major %>
+    <td><%= link_to 'Edit', edit_major_path(major) %></td> 
+    <td><%= link_to 'Destroy', major, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
     <td><%= link_to 'Show', alumni %></td>
     <td><%= link_to 'Edit', edit_alumni_path(alumni) %></td>
     <td><%= link_to 'Destroy', alumni, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
+	
+	
 <br />
-
-<%= link_to 'New Alumni', new_alumni_path %>
+ <%= link_to 'New Alumni', new_alumni_path %>
+ <% end %>
+ 
+ 
+ 

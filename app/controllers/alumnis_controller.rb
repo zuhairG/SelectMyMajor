@@ -22,6 +22,14 @@ def invite
  end
   
   
+   def searchAlumni
+	@alumnis = Alumni.all
+  respond_to do |format|
+  format.html #index.html.erb
+  format.json {render json:@alumnis}
+  end
+  end
+  
   # GET /alumnis/1
   # GET /alumnis/1.json
   def show
